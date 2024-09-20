@@ -1,5 +1,7 @@
 package Common;
 
+import DataStructures.ListNode;
+
 public class LinkedListHelper {
     public LinkedListNode createLinkedList(int n) {
         LinkedListNode n1 = new LinkedListNode(5);
@@ -56,6 +58,14 @@ public class LinkedListHelper {
             node = node.next;
         }
         System.out.println(node.data);
+    }
+
+    public static void printNodes(ListNode node) {
+        while (node.next != null) {
+            System.out.print(node.val + "->");
+            node = node.next;
+        }
+        System.out.println(node.val);
     }
 
 }
