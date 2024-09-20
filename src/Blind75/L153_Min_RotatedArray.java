@@ -1,4 +1,4 @@
-package Blind75.Array;
+package Blind75;
 
 public class L153_Min_RotatedArray {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package Blind75.Array;
+package Blind75;
 
 public class L152_Max_Product_SubArray {
     public static void main(String[] args) {

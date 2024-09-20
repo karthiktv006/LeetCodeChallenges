@@ -1,4 +1,4 @@
-package Blind75.Array;
+package Blind75;
 
 import java.io.PrintStream;
 
