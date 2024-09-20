@@ -1,7 +1,5 @@
 package Blind75;
 
-import java.io.PrintStream;
-
 public class L238_Product_Array_Except_Self {
     public static void main(String[] args) {
         int[] arr = { 1, 2, 3, 4};
