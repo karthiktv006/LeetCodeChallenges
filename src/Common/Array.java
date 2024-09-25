@@ -40,4 +40,14 @@ public class Array {
         System.out.println();
     }
 
+    public void print2DArrayCharacter(char[][] arr) {
+        for (char[] row: arr) {
+            for (char val: row) {
+                System.out.print(val + " ");
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+
 }
