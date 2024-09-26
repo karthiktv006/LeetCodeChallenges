@@ -1,10 +1,9 @@
 package Blind75;
 
-import Common.TreeNode;
+import DataStructures.TreeNode;
 import Helper.L104;
 
 import java.util.LinkedList;
-import java.util.PriorityQueue;
 import java.util.Queue;
 
 public class L104_Maximum_Depth_BT {

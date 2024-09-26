@@ -1,6 +1,6 @@
 package Helper;
 
-import Common.TreeNode;
+import DataStructures.TreeNode;
 
 public class L104 {
     public static TreeNode tc1() {

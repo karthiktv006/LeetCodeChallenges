@@ -1,6 +1,6 @@
 package Blind75;
 
-import Common.TreeNode;
+import DataStructures.TreeNode;
 import Helper.L100;
 
 public class L100_Same_Tree {
