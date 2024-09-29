@@ -31,6 +31,7 @@ public class L105_Create_BT {
     }
 
 
+    // try to clean-up array creation part
     public static TreeNode createBT(int[] preorder, int[] inorder) {
         if (preorder.length == 0) {
             return null;
