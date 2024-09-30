@@ -3,7 +3,9 @@ package Blind75;
 import Common.Array;
 import Helper.L347;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.PriorityQueue;
 
 public class L347_Top_K_Frequent {
@@ -11,7 +13,7 @@ public class L347_Top_K_Frequent {
         int[] nums = L347.tc1();
         int k = 2;
 
-        new Array().print1DArrayInteger(topKFrequent(nums, k));
+        new Array().print1DArrayInteger(topKFrequent2(nums, k));
 
 
         // Practice max heap in java
@@ -44,6 +46,40 @@ public class L347_Top_K_Frequent {
 //
 //        System.out.println(queue);
 
+    }
+
+    // Time: O(n + n) => O(n)
+    public static int[] topKFrequent2(int[] nums, int k) {
+        HashMap<Integer, Integer> freqMap = new HashMap<>();
+        for (int num : nums) {
+            freqMap.put(num, freqMap.getOrDefault(num, 0) + 1);
+        }
+
+        System.out.println(freqMap);
+
+        ArrayList[] freqBucket = new ArrayList[nums.length + 1];
+        freqMap.forEach((key, value) -> {
+            if (freqBucket[value] == null) {
+                ArrayList<Integer> list = new ArrayList<>();
+                list.add(key);
+                freqBucket[value] = list;
+            } else {
+                freqBucket[value].add(key);
+            }
+        });
+
+        int[] res = new int[k];
+        for (int i = nums.length; i > 0; i--) {
+            if (freqBucket[i] != null) {
+                for (Object n : freqBucket[i]) {
+                    res[k - 1] = (int) n;
+                    k--;
+                    if (k < 1) return res;
+                }
+            }
+        }
+
+        return null;
     }
 
     public static int[] topKFrequent(int[] nums, int k) {
