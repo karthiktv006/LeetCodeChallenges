@@ -32,8 +32,12 @@ public class Array {
 
     public void print2DArrayInteger(int[][] arr) {
         for (int[] row: arr) {
-            for (int val: row) {
-                System.out.print(val + " ");
+            if (row != null) {
+                for (int val: row) {
+                    System.out.print(val + " ");
+                }
+            } else {
+                System.out.print("NULL");
             }
             System.out.println();
         }
