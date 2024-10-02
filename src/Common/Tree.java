@@ -8,7 +8,7 @@ import java.util.Queue;
 public class Tree {
     public void printBinaryTree(TreeNode root) {
         if (root == null) return;
-        System.out.print(STR."\{root.val} ");
+        System.out.println("root.val = " + root.val);
         printBinaryTree(root.left);
         printBinaryTree(root.right);
     }
