@@ -24,6 +24,7 @@ class Node {
     }
 }
 
+// Time limit exceed on 2000 courses - works but not efficient check L207_Course_Schedule2
 public class L207_Course_Schedule {
     public static void main(String[] args) {
         int[][] prerequisites = L207.tc5();
