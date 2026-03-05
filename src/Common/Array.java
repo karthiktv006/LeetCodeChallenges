@@ -24,10 +24,11 @@ public class Array {
     }
 
     public void print1DArrayInteger(int[] arr) {
+        System.out.print("[");
         for (int val: arr) {
-            System.out.print(val);
+            System.out.print(val + ",");
         }
-        System.out.println();
+        System.out.println("]");
     }
 
     public void print2DArrayInteger(int[][] arr) {
