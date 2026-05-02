@@ -5,7 +5,9 @@ public class L1768_MergeStringsAlternatively {
         String word1 = "abcdef";
         String word2 = "xyz";
 
-        System.out.println(mergeAlternatively(word1, word2));
+        //System.out.println(mergeAlternatively(word1, word2));
+        //System.out.println(mergeAlternatively2(word2, word2));
+        System.out.println(mergeAlternatively3(word1, word2));
 
     }
 
@@ -28,5 +30,33 @@ public class L1768_MergeStringsAlternatively {
 
         return res.toString();
 
+    }
+
+    private static String mergeAlternatively2(String word1, String word2) {
+        StringBuilder sb = new StringBuilder();
+        int maxLen = Math.max(word1.length(), word2.length());
+        for (int i = 0; i < maxLen; i++) {
+            if (i < word1.length()) {
+                sb.append(word1.charAt(i));
+            }
+            if (i < word2.length()) {
+                sb.append(word2.charAt(i));
+            }
+        }
+
+        return sb.toString();
+    }
+
+    private static String mergeAlternatively3(String word1, String word2) {
+        StringBuilder sb = new StringBuilder();
+        int i = 0, j= 0;
+        while (i < word1.length() && j < word2.length()) {
+            sb.append(word1.charAt(i++));
+            sb.append(word2.charAt(j++));
+        }
+        sb.append(word1.substring(i));
+        sb.append(word2.substring(j));
+
+        return sb.toString();
     }
 }
